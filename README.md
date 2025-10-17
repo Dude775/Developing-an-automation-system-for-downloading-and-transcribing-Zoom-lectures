@@ -1,0 +1,2 @@
+# Developing-an-automation-system-for-downloading-and-transcribing-Zoom-lectures
+Automated PowerShell pipeline for Zoom lecture transcription. Downloads MP4 from URL → Extracts audio via FFmpeg → Transcribes using OpenAI Whisper → Outputs clean TXT. Processes 40-min lectures in ~20 mins. Modular architecture with config.json. Supports batch processing and local files. Built for Bar-Ilan students but works universally.
