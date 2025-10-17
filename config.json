@@ -1,0 +1,21 @@
+﻿{
+  "settings": {
+    "temp_folder": ".\\temp",
+    "output_folder": ".\\output",
+    "audio_format": "mp3",
+    "audio_quality": "192k",
+    "cleanup_temp_files": true,
+    "transcription_service": "whisper",
+    "language": "he-IL"
+  },
+  "whisper": {
+    "model_size": "base",
+    "language": "hebrew",
+    "translate_to_english": false
+  },
+  "output_format": {
+    "include_timestamps": true,
+    "create_summary": true,
+    "file_naming": "{date}_{course}_{title}"
+  }
+}

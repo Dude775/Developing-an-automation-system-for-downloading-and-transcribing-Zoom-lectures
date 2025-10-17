@@ -1,0 +1,89 @@
+# 🎉 **מזל טוב! המערכת עובדת מצוין!**
+
+התמלול איכותי ומדויק. עכשיו בואו נכין לך **מדריך הפעלה** למחר ואילך.
+
+## **📋 הוראות הפעלה יומיות**
+
+### **צעד 1: פתיחת PowerShell בתיקייה הנכונה**
+```powershell
+# פתח PowerShell כמנהל מערכת
+# נווט לתיקיית הפרויקט
+cd "C:\ZoomTranscriber"
+```
+
+### **צעד 2: טעינת המודולים (חובה בכל הפעלה)**
+```powershell
+# טעינת כל הפונקציות
+. ".\modules\VideoDownloader.ps1"
+. ".\modules\AudioExtractor.ps1" 
+. ".\modules\Transcriber.ps1"
+```
+
+### **צעד 3: הרצת התמלול**
+```powershell
+# הפעלת התמלול עם URL חדש
+.\main.ps1 -VideoUrl "כאן_תכניס_את_ה_URL" -CourseTitle "שם_הקורס"
+```
+
+---
+
+## **📝 דוגמא מלאה להפעלה**
+
+**כל פעם שאתה רוצה לתמלל הקלטה חדשה:**
+
+```powershell
+# 1. נווט לתיקייה
+cd "C:\ZoomTranscriber"
+
+# 2. טען מודולים
+. ".\modules\VideoDownloader.ps1"
+. ".\modules\AudioExtractor.ps1" 
+. ".\modules\Transcriber.ps1"
+
+# 3. הפעל עם URL חדש
+.\main.ps1 -VideoUrl "https://lemida.biu.ac.il/pluginfile.php/..." -CourseTitle "ניהול_פרויקטים"
+```
+
+---
+
+## **⚠️ חשוב לזכור:**
+
+1. **PowerShell כמנהל** - הפעל תמיד כמנהל מערכת
+2. **טעינת מודולים בכל פעם** - חובה אחרי כיבוי מחשב
+3. **URL מ-F12** - תמשיך לחפש URLs כמו שעשית קודם
+4. **זמן ביצוע** - כ-20-25 דקות לשיעור של שעה
+
+---
+
+## **📁 מבנה התיקיות שלך:**
+
+```
+C:\ZoomTranscriber\
+├── main.ps1 (הסקריפט הראשי)
+├── config.json (הגדרות)
+├── modules\ (הפונקציות)
+├── temp\ (קבצים זמניים)
+└── output\ (התמלולים המוכנים!)
+```
+
+---
+
+## **🚀 הפעלה מהירה (יצירת קיצור)**
+
+רוצה שניצור לך **קובץ batch** שיעשה הכל אוטומטית?
+
+```batch
+@echo off
+cd /d "C:\ZoomTranscriber"
+powershell -ExecutionPolicy Bypass -Command "
+. '.\modules\VideoDownloader.ps1'
+. '.\modules\AudioExtractor.ps1' 
+. '.\modules\Transcriber.ps1'
+Write-Host 'Ready! Now run: .\main.ps1 -VideoUrl YOUR_URL -CourseTitle YOUR_COURSE' -ForegroundColor Green
+"
+pause
+```
+
+**האם תרצה שניצור קובץ batch כזה?** זה יחסוך לך את השלבים 1-2 בכל פעם.
+
+איך זה נשמע? יש שאלות על התהליך?
